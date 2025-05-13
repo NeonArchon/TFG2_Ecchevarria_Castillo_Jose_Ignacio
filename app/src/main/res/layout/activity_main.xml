@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50DAF9"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="190dp"
+        android:layout_height="204dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewfondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/logo" />
+
+    <View
+        android:id="@+id/viewfondo"
+        android:layout_width="410dp"
+        android:layout_height="340dp"
+        android:background="@drawable/borde_redondo_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="412dp"
+        android:layout_height="320dp"
+        app:cardBackgroundColor="#DA5AA7"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewfondo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="188dp"
+                android:layout_height="60dp"
+                android:hint="E-Mail"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                android:background="@drawable/borde_redondo_texto"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/Contrasena"
+                android:layout_width="189dp"
+                android:layout_height="60dp"
+                android:hint="Contraseña"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                android:background="@drawable/borde_redondo_texto"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/Contrasenaadmin"
+                android:layout_width="189dp"
+                android:layout_height="60dp"
+                android:hint="Cod. Admin"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                android:background="@drawable/borde_redondo_texto"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/Contrasena"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/boton_EntradaUsuario"
+                android:layout_width="189dp"
+                android:layout_height="60dp"
+                android:text="Entrar"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:backgroundTint="#07CF78"
+                app:layout_constraintTop_toBottomOf="@id/Contrasenaadmin"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <Button
+                android:id="@+id/boton_EntradaAdmin"
+                android:layout_width="189dp"
+                android:layout_height="60dp"
+                android:text="Como admin"
+                android:textColor="@color/white"
+                app:backgroundTint="#4B4A4A"
+                app:layout_constraintTop_toBottomOf="@id/Contrasenaadmin"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/linkregistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Tienes Cuenta? Registrate"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="10dp"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/NomnreAap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Planeta Maqueta"
+        android:textColor="#DA2C49"
+        android:fontFamily="serif"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
