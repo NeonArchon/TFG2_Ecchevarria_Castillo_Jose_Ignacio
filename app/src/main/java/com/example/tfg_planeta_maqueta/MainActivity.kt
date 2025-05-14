@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun iniciarSesionUsuario() {
         Toast.makeText(this, "Bienvenido Usuario", Toast.LENGTH_SHORT).show()
-        val intent = Intent(this, PantallaUsuario::class.java).apply {
+        val intent = Intent(this, PantallaTienda::class.java).apply {
             putExtra("EMAIL", emailEditText.text.toString())
         }
         startActivity(intent)
